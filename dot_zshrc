@@ -1,4 +1,6 @@
-# homebrew
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
