@@ -11,8 +11,8 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
-export ZPLUG_HOME="/usr/local/opt/zplug"
-export PATH="$HOME/bin:/usr/local/sbin:$PATH"
+export ZIM_HOME=~/.zim
+export PATH="$HOME/bin:$PATH"
 
 alias c="chezmoi"
 alias d="docker"
@@ -28,3 +28,15 @@ bindkey -M viins "jj" vi-cmd-mode
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 source "$(brew --prefix asdf)/libexec/asdf.sh"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+    https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+fi
+
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
+
+source ${ZIM_HOME}/init.zsh

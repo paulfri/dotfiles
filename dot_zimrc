@@ -1,0 +1,8 @@
+zmodule Ansimorph/oblong
+zmodule zsh-users/zsh-completions --fpath src
+zmodule completion
+zmodule fzf
+zmodule git-info
+zmodule urbainvaes/fzf-marks
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-autosuggestions
