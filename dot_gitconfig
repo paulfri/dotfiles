@@ -6,6 +6,7 @@
 [core]
   editor = nvim
   excludesfile = $HOME/.gitignore
+  pager = delta
 [push]
   default = simple
 [alias]
@@ -21,3 +22,11 @@
   su = submodule update --init
 [pull]
   ff = only
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
