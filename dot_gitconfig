@@ -1,3 +1,22 @@
 [user]
-name = Paul Friedman
-email = paulfri@hey.com
+  name = Paul Friedman
+  email = paulfri@hey.com
+[color]
+  ui = true
+[core]
+  editor = nvim
+[push]
+  default = simple
+[alias]
+  br = branch
+  ci = commit --verbose
+  co = checkout
+  st = status --short
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ds = diff --staged
+  la = "!git config -l | grep alias | cut -c 7-"
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  pu = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
+  su = submodule update --init
+[pull]
+  ff = only
