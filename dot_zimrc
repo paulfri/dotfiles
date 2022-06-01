@@ -1,8 +1,11 @@
-zmodule paulfri/zshtheme
-zmodule zsh-users/zsh-completions --fpath src
 zmodule completion
+zmodule utility
 zmodule fzf
+zmodule exa
 zmodule git-info
+zmodule duration-info
+zmodule prompt-pwd
 zmodule urbainvaes/fzf-marks
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-autosuggestions
+zmodule paulfri/zshtheme
