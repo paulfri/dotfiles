@@ -1,0 +1,5 @@
+require("plugins")
+require("options")
+require("bindings")
+require("autocmd")
+require("theme")
