@@ -1,4 +1,4 @@
-zmodule Ansimorph/oblong
+zmodule paulfri/zshtheme
 zmodule zsh-users/zsh-completions --fpath src
 zmodule completion
 zmodule fzf
