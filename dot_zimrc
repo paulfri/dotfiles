@@ -1,5 +1,7 @@
+zmodule zsh-users/zsh-completions --fpath src
 zmodule completion
 zmodule utility
+zmodule asdf
 zmodule fzf
 zmodule exa
 zmodule git-info

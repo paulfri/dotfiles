@@ -26,7 +26,6 @@ setopt incappendhistory
 bindkey -M viins "jj" vi-cmd-mode
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-source "$(brew --prefix asdf)/libexec/asdf.sh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
