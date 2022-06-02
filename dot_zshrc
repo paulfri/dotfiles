@@ -2,9 +2,7 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export EDITOR="nvim"
 export VISUAL="nvim"
-export LESS="--long-prompt --hilite-search --ignore-case --QUIET"
 export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
 export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
 export SAVEHIST=10000
@@ -18,14 +16,13 @@ alias d="docker"
 alias g="git"
 alias k="kubectl"
 alias kx="kubectx"
-alias la="ls -lah"
 alias tc='clear; tmux clear-history; clear'
 alias vim="nvim"
 
 setopt incappendhistory
-bindkey -M viins "jj" vi-cmd-mode
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
