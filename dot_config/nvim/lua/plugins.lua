@@ -20,38 +20,7 @@ require("packer").startup(function(use)
 	use("famiu/bufdelete.nvim")
 	use("navarasu/onedark.nvim")
 	use("neovim/nvim-lspconfig")
-
-	use("lukas-reineke/indent-blankline.nvim", {
-		config = {
-			require("indent_blankline").setup({
-				buftype_exclude = {
-					"terminal",
-					"nofile",
-					"NvimTree",
-				},
-				filetype_exclude = {
-					"startup",
-					"lspinfo",
-					"packer",
-					"checkhealth",
-					"help",
-					"man",
-					"NvimTree",
-					"",
-				},
-				char = "",
-				char_highlight_list = {
-					"IndentBlanklineIndent1",
-					"IndentBlanklineIndent2",
-				},
-				space_char_highlight_list = {
-					"IndentBlanklineIndent1",
-					"IndentBlanklineIndent2",
-				},
-				show_trailing_blankline_indent = false,
-			}),
-		},
-	})
+	use("lukas-reineke/indent-blankline.nvim")
 
 	use({
 		"mhartington/formatter.nvim",
@@ -162,3 +131,30 @@ require("mini.surround").setup()
 require("scrollbar").setup()
 require("scrollbar.handlers.search").setup()
 require("bufferline").setup()
+require("indent_blankline").setup({
+	buftype_exclude = {
+		"terminal",
+		"nofile",
+		"NvimTree",
+	},
+	filetype_exclude = {
+		"startup",
+		"lspinfo",
+		"packer",
+		"checkhealth",
+		"help",
+		"man",
+		"NvimTree",
+		"",
+	},
+	char = "",
+	char_highlight_list = {
+		"IndentBlanklineIndent1",
+		"IndentBlanklineIndent2",
+	},
+	show_trailing_blankline_indent = false,
+	space_char_highlight_list = {
+		"IndentBlanklineIndent1",
+		"IndentBlanklineIndent2",
+	},
+})
