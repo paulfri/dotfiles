@@ -64,6 +64,8 @@ require("packer").startup(function(use)
 		run = ":tsupdate",
 	})
 
+  use 'nvim-treesitter/nvim-treesitter-context'
+
 	use({
 		"aserowy/tmux.nvim",
 		config = function()
