@@ -64,7 +64,7 @@ require("packer").startup(function(use)
 		run = ":tsupdate",
 	})
 
-  use 'nvim-treesitter/nvim-treesitter-context'
+	use("nvim-treesitter/nvim-treesitter-context")
 
 	use({
 		"aserowy/tmux.nvim",
@@ -100,6 +100,18 @@ require("packer").startup(function(use)
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
+	})
+
+	use({
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
 	})
 
 	use({
