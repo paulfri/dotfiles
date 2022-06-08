@@ -47,10 +47,15 @@ require("packer").startup(function(use)
 					lua = {
 						require("formatter.filetypes.lua").stylua,
 					},
+					go = {
+						require("formatter.filetypes.go").gofmt,
+					},
 				},
 			})
 		end,
 	})
+
+	use({ "neoclide/coc.nvim", branch = "release" })
 
 	use({
 		"lewis6991/gitsigns.nvim",
@@ -119,6 +124,10 @@ require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+
+	use("nvim-lua/plenary.nvim")
+
+	use("crispgm/nvim-go")
 
 	use({
 		"folke/trouble.nvim",
@@ -190,3 +199,5 @@ require("indent_blankline").setup({
 		"IndentBlanklineIndent2",
 	},
 })
+require("go").setup({})
+require("lspconfig").gopls.setup({})

@@ -9,7 +9,8 @@ export SAVEHIST=10000
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 export ZIM_HOME=~/.zim
-export PATH="$HOME/bin:$PATH"
+export GOPATH="$HOME/go"
+export PATH="$HOME/bin:$PATH:$GOPATH/bin"
 
 alias c="chezmoi"
 alias d="docker"
