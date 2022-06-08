@@ -11,6 +11,10 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	})
 end
 
+local function get_config(name)
+	return string.format('require("config/%s")', name)
+end
+
 require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("terrortylor/nvim-comment")
@@ -21,6 +25,18 @@ require("packer").startup(function(use)
 	use("navarasu/onedark.nvim")
 	use("neovim/nvim-lspconfig")
 	use("lukas-reineke/indent-blankline.nvim")
+
+	use({
+		"hrsh7th/nvim-cmp",
+		requires = {
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+			{ "hrsh7th/cmp-cmdline" },
+			{ "f3fora/cmp-spell", { "hrsh7th/cmp-calc" }, { "lukas-reineke/cmp-rg" } },
+		},
+		config = get_config("cmp"),
+	})
 
 	use({
 		"mhartington/formatter.nvim",
@@ -58,6 +74,8 @@ require("packer").startup(function(use)
 			offsets = { { filetype = "NvimTree", text_align = "left" } },
 		},
 	})
+
+	use({ "onsails/lspkind-nvim", requires = { "famiu/bufdelete.nvim" } })
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
