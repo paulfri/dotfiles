@@ -47,8 +47,17 @@ require("packer").startup(function(use)
 					lua = {
 						require("formatter.filetypes.lua").stylua,
 					},
-					go = {
-						require("formatter.filetypes.go").gofmt,
+					javascript = {
+						require("formatter.filetypes.javascript").prettier,
+					},
+					json = {
+						require("formatter.filetypes.json").prettier,
+					},
+					typescript = {
+						require("formatter.filetypes.typescript").prettier,
+					},
+					yaml = {
+						require("formatter.filetypes.yaml").prettier,
 					},
 				},
 			})
