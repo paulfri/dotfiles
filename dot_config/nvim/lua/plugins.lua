@@ -26,6 +26,8 @@ require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("lukas-reineke/indent-blankline.nvim")
 
+	use("windwp/nvim-autopairs")
+
 	use({
 		"hrsh7th/nvim-cmp",
 		requires = {
@@ -210,3 +212,6 @@ require("indent_blankline").setup({
 })
 require("go").setup({})
 require("lspconfig").gopls.setup({})
+require("nvim-autopairs").setup({
+	disable_filetype = { "TelescopePrompt", "vim" },
+})
