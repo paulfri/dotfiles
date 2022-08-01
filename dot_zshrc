@@ -19,6 +19,7 @@ alias k="kubectl"
 alias kx="kubectx"
 alias tc='clear; tmux clear-history; clear'
 alias vim="nvim"
+alias la="exa --long --all --icons"
 
 setopt incappendhistory
 
