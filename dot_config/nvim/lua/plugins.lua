@@ -172,6 +172,15 @@ require("packer").startup(function(use)
 		end,
 	})
 
+	use({
+		"kylechui/nvim-surround",
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
@@ -179,7 +188,6 @@ end)
 
 require("nvim-tree").setup()
 require("nvim_comment").setup()
-require("mini.surround").setup()
 require("scrollbar").setup()
 require("scrollbar.handlers.search").setup()
 require("bufferline").setup()
