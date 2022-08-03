@@ -26,7 +26,7 @@
   diffFilter = delta --color-only
 [delta]
   navigate = true
-  features = side-by-side line-numbers decorations navigate hyperlinks
+  features = line-numbers decorations navigate hyperlinks
   plus-style = syntax auto
   minus-style = syntax auto
 [merge]
