@@ -46,6 +46,9 @@ require("packer").startup(function(use)
 			require("formatter").setup({
 				filetype = {
 					-- https://github.com/mhartington/formatter.nvim/tree/master/lua/formatter/filetypes
+					python = {
+						require("formatter.filetypes.python").black,
+					},
 					lua = {
 						require("formatter.filetypes.lua").stylua,
 					},
@@ -67,6 +70,8 @@ require("packer").startup(function(use)
 	})
 
 	use({ "neoclide/coc.nvim", branch = "release" })
+
+	use("mfussenegger/nvim-lint")
 
 	use({
 		"lewis6991/gitsigns.nvim",
@@ -223,3 +228,6 @@ require("lspconfig").gopls.setup({})
 require("nvim-autopairs").setup({
 	disable_filetype = { "TelescopePrompt", "vim" },
 })
+require("lint").linters_by_ft = {
+	python = { "pylint" },
+}
