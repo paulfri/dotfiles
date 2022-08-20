@@ -1,3 +1,4 @@
+require("setup")
 require("plugins")
 require("options")
 require("bindings")

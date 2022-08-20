@@ -1,16 +1,3 @@
-local fn = vim.fn
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-	packer_bootstrap = fn.system({
-		"git",
-		"clone",
-		"--depth",
-		"1",
-		"https://github.com/wbthomason/packer.nvim",
-		install_path,
-	})
-end
-
 local function get_config(name)
 	return string.format('require("config/%s")', name)
 end
@@ -141,6 +128,7 @@ require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use("nvim-lua/plenary.nvim")
 
 	use("crispgm/nvim-go")
@@ -231,3 +219,4 @@ require("nvim-autopairs").setup({
 require("lint").linters_by_ft = {
 	python = { "pylint" },
 }
+require("telescope").load_extension("fzf")
