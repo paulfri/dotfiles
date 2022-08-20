@@ -29,7 +29,7 @@ vim.api.nvim_create_autocmd(
 	{ command = [[if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif]] }
 )
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+vim.api.nvim_create_autocmd({ "BufWinEnter", "BufWritePost" }, {
 	callback = function()
 		require("lint").try_lint()
 	end,
