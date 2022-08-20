@@ -15,6 +15,7 @@ keymap("n", "Y", "Y", opts)
 
 -- Clear search highlight
 keymap("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", opts)
+keymap("n", "<leader><leader>", ":nohlsearch<Bar>:echo<CR>", opts)
 
 -- Resizing panes
 keymap("n", "<Left>", ":vertical resize +1<CR>", opts)
@@ -24,6 +25,7 @@ keymap("n", "<Down>", ":resize +1<CR>", opts)
 
 -- telescope
 keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
+keymap("n", "\\", ":Telescope live_grep<CR>", opts)
 
 -- buffers
 keymap("n", "<C-w>", ":Bdelete<CR>", opts)
