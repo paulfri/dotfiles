@@ -1,6 +1,6 @@
 [user]
   name = Paul Friedman
-  email = paulfri@hey.com
+  email = {{ or .email "paulfri@hey.com" }}
 [color]
   ui = true
 [core]
