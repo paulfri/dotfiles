@@ -217,6 +217,6 @@ require("nvim-autopairs").setup({
 	disable_filetype = { "TelescopePrompt", "vim" },
 })
 require("lint").linters_by_ft = {
-	python = { "pylint" },
+	python = { "flake8" },
 }
 require("telescope").load_extension("fzf")
