@@ -1,14 +1,17 @@
-bat
-chezmoi
-exa
-fzf
-git-delta
-git-lfs
-kubectx
-kubernetes-cli
-neovim
-reattach-to-user-namespace
-redis
-stylua
-tmux
-tree-sitter
+brew "bat"
+brew "chafa"
+brew "chezmoi"
+brew "exa"
+brew "exiftool"
+brew "fzf"
+brew "git-delta"
+brew "git-lfs"
+brew "kubectx"
+brew "kubernetes-cli"
+brew "lesspipe"
+brew "neovim"
+brew "reattach-to-user-namespace"
+brew "redis"
+brew "stylua"
+brew "tmux"
+brew "tree-sitter"
