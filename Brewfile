@@ -1,0 +1,14 @@
+bat
+chezmoi
+exa
+fzf
+git-delta
+git-lfs
+kubectx
+kubernetes-cli
+neovim
+reattach-to-user-namespace
+redis
+stylua
+tmux
+tree-sitter
