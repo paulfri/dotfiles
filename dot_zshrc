@@ -36,4 +36,6 @@ if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
 
+[[ -f ~/src/carta/.env ]] && source ~/src/carta/.env
+
 source ${ZIM_HOME}/init.zsh

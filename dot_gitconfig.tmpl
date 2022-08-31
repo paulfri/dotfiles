@@ -5,7 +5,6 @@
   ui = true
 [core]
   editor = nvim
-  excludesfile = ~/.config/git/ignore
   pager = delta
 [push]
   default = simple
@@ -22,17 +21,17 @@
   su = submodule update --init
 [pull]
   ff = only
-[interactive]
-  diffFilter = delta --color-only
 [delta]
   navigate = true
-  features = line-numbers decorations navigate hyperlinks
-  plus-style = syntax auto
-  minus-style = syntax auto
-[merge]
-  conflictstyle = diff3
+  features = line-numbers
 [diff]
   colorMoved = default
+[interactive]
+  diffFilter = delta --color-only
+[add.interactive]
+  useBuiltin = false
+[merge]
+  conflictstyle = diff3
 [init]
   defaultBranch = main
 [url "ssh://git@github.com"]
