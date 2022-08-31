@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Resizes the current tmux pane to half of the tmux window.
+
+width=$(tmux display -p '#{window_width}')
+half=$(expr $width \* 1 / 2)
+
+tmux resizep -t{right} -x $half
