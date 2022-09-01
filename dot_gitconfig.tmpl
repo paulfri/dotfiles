@@ -36,3 +36,9 @@
   defaultBranch = main
 [url "ssh://git@github.com"]
   insteadOf = https://github.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

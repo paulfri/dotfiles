@@ -5,4 +5,4 @@
 width=$(tmux display -p '#{window_width}')
 half=$(expr $width \* 1 / 2)
 
-tmux resizep -t{right} -x $half
+tmux resize-pane -t{right} -x $half

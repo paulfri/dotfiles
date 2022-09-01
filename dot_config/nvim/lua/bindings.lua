@@ -4,6 +4,7 @@ local expr_opts = { noremap = true, expr = true, silent = true }
 
 -- Tree
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>r", "::NvimTreeFindFile<CR>", opts)
 
 -- Paste over text without yank
 keymap("v", "p", '"_dP', opts)
