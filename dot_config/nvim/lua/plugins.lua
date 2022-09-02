@@ -220,6 +220,7 @@ require("indent_blankline").setup({
 })
 require("go").setup({})
 require("lspconfig").gopls.setup({})
+require("lspconfig").pyright.setup({})
 require("nvim-autopairs").setup({
 	disable_filetype = { "TelescopePrompt", "vim" },
 })
