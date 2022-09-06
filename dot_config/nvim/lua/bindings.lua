@@ -8,7 +8,6 @@ keymap("n", "<leader>r", "::NvimTreeFindFile<CR>", opts)
 
 -- Paste over text without yank
 keymap("v", "p", '"_dP', opts)
-keymap("v", "p", '"_dP', opts)
 
 -- yank CR with newline, too old to relearn this
 -- https://github.com/neovim/neovim/pull/13268
@@ -38,15 +37,6 @@ keymap("n", "<C-g>", ":Gitsigns toggle_current_line_blame<CR>", opts)
 
 -- search
 keymap("n", "n", "nzz", opts)
-
--- trouble
-keymap("n", "<C-y>", "<cmd>TroubleToggle<cr>", opts)
-keymap("n", "<leader>xx", "<cmd>Trouble<cr>", opts)
-keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", opts)
-keymap("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>", opts)
-keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", opts)
-keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", opts)
-keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
 
 -- diagnostics
 keymap("n", "<leader>d", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)

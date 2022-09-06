@@ -56,8 +56,6 @@ require("packer").startup(function(use)
 		end,
 	})
 
-	use({ "neoclide/coc.nvim", branch = "release" })
-
 	use("mfussenegger/nvim-lint")
 
 	use({
@@ -138,20 +136,6 @@ require("packer").startup(function(use)
 		run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 	})
 
-	use("crispgm/nvim-go")
-
-	use({
-		"folke/trouble.nvim",
-		requires = "kyazdani42/nvim-web-devicons",
-		config = function()
-			require("trouble").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
-		end,
-	})
-
 	use({
 		"startup-nvim/startup.nvim",
 		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
@@ -180,6 +164,8 @@ require("packer").startup(function(use)
 			})
 		end,
 	})
+
+	use({ "arnamak/stay-centered.nvim" })
 
 	if packer_bootstrap then
 		require("packer").sync()
@@ -218,8 +204,7 @@ require("indent_blankline").setup({
 		"IndentBlanklineIndent2",
 	},
 })
-require("go").setup({})
-require("lspconfig").gopls.setup({})
+require("stay-centered")
 require("lspconfig").pyright.setup({})
 require("nvim-autopairs").setup({
 	disable_filetype = { "TelescopePrompt", "vim" },
