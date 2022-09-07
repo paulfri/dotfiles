@@ -204,12 +204,18 @@ require("indent_blankline").setup({
 		"IndentBlanklineIndent2",
 	},
 })
+
 require("stay-centered")
-require("lspconfig").pyright.setup({})
+
 require("nvim-autopairs").setup({
 	disable_filetype = { "TelescopePrompt", "vim" },
 })
+
 require("lint").linters_by_ft = {
 	python = { "flake8" },
 }
+
 require("telescope").load_extension("fzf")
+
+require("lspconfig").pyright.setup({})
+require("lspconfig").tsserver.setup({})

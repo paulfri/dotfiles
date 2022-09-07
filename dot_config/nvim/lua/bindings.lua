@@ -26,6 +26,7 @@ keymap("n", "<Down>", ":resize +1<CR>", opts)
 -- telescope
 keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
 keymap("n", "\\", ":Telescope live_grep<CR>", opts)
+keymap("n", "<C-r>", ":Telescope lsp_document_symbols symbols=class<CR>", opts)
 
 -- buffers
 keymap("n", "<C-w>", ":Bdelete<CR>", opts)
@@ -42,8 +43,11 @@ keymap("n", "n", "nzz", opts)
 keymap("n", "<leader>d", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)
 
 -- lsp
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
+vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, opts)
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
+
 local on_attach = function(client, bufnr)
 	-- Enable completion triggered by <c-x><c-o>
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
