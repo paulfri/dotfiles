@@ -39,6 +39,11 @@ keymap("n", "<C-g>", ":Gitsigns toggle_current_line_blame<CR>", opts)
 -- search
 keymap("n", "n", "nzz", opts)
 
+-- test
+keymap("n", "<leader>.", "<cmd>lua require('neotest').run.run()<CR>", opts)
+keymap("n", "<leader>..", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", opts)
+keymap("n", "<leader>?", "<cmd>lua require('neotest').output.open({ enter = true })<CR>", opts)
+
 -- diagnostics
 keymap("n", "<leader>d", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)
 

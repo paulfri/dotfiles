@@ -171,6 +171,18 @@ require("packer").startup(function(use)
 	use("mfussenegger/nvim-dap-python")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 
+	use({
+		"nvim-neotest/neotest",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"antoinemadec/FixCursorHold.nvim",
+		},
+	})
+	use({
+		"nvim-neotest/neotest-python",
+  })
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
@@ -256,3 +268,9 @@ require("telescope").load_extension("fzf")
 
 require("lspconfig").pyright.setup({})
 require("lspconfig").tsserver.setup({})
+
+require("neotest").setup({
+  adapters = {
+    require("neotest-python")
+  }
+})
