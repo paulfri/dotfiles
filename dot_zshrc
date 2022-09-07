@@ -12,7 +12,8 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 export ZIM_HOME=~/.zim
 export GOPATH="$HOME/go"
-export PATH="$HOME/bin:$PATH:$GOPATH/bin"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$HOME/bin:$PATH:$GOPATH/bin"
 
 alias c="chezmoi"
 alias d="docker"
@@ -37,5 +38,7 @@ if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
 fi
 
 [[ -f ~/src/carta/.env ]] && source ~/src/carta/.env
+
+eval "$(pyenv init -)"
 
 source ${ZIM_HOME}/init.zsh

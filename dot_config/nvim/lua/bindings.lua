@@ -42,6 +42,24 @@ keymap("n", "n", "nzz", opts)
 -- diagnostics
 keymap("n", "<leader>d", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)
 
+-- dap
+keymap("n", "<leader>u", "<cmd>lua require('dapui').toggle()<CR>", opts)
+
+keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)
+keymap("n", "<F10>", "<cmd>lua require'dap'.step_over()<CR>", opts)
+keymap("n", "<F11>", "<cmd>lua require'dap'.step_into()<CR>", opts)
+keymap("n", "<F12>", "<cmd>lua require'dap'.step_out()<CR>", opts)
+keymap("n", "<leader>b", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", opts)
+keymap("n", "<leader>B", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
+keymap(
+	"n",
+	"<leader>lp",
+	"<cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>",
+	opts
+)
+keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<CR>", opts)
+keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)
+
 -- lsp
 vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, opts)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
