@@ -181,7 +181,10 @@ require("packer").startup(function(use)
 	})
 	use({
 		"nvim-neotest/neotest-python",
-  })
+	})
+
+	use("tyru/open-browser-github.vim")
+	use("tyru/open-browser.vim")
 
 	if packer_bootstrap then
 		require("packer").sync()
@@ -270,7 +273,7 @@ require("lspconfig").pyright.setup({})
 require("lspconfig").tsserver.setup({})
 
 require("neotest").setup({
-  adapters = {
-    require("neotest-python")
-  }
+	adapters = {
+		require("neotest-python"),
+	},
 })
