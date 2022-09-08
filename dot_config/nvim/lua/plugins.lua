@@ -114,13 +114,6 @@ require("packer").startup(function(use)
 		},
 	})
 
-	use({
-		"folke/which-key.nvim",
-		config = function()
-			require("which-key").setup({})
-		end,
-	})
-
 	use("nvim-lua/plenary.nvim")
 
 	use({

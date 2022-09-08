@@ -9,9 +9,12 @@ keymap("n", "<leader>r", "::NvimTreeFindFile<CR>", opts)
 -- Paste over text without yank
 keymap("v", "p", '"_dP', opts)
 
--- yank CR with newline, too old to relearn this
+-- Yank CR with newline, too old to relearn this
 -- https://github.com/neovim/neovim/pull/13268
 keymap("n", "Y", "Y", opts)
+
+-- Empty newline
+keymap("n", "<space>", ':exe "normal i".nr2char(getchar())<CR>', opts)
 
 -- Clear search highlight
 keymap("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", opts)
