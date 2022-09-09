@@ -172,6 +172,7 @@ require("packer").startup(function(use)
 			"antoinemadec/FixCursorHold.nvim",
 		},
 	})
+
 	use({
 		"nvim-neotest/neotest-python",
 	})
@@ -267,6 +268,9 @@ require("lspconfig").tsserver.setup({})
 
 require("neotest").setup({
 	adapters = {
-		require("neotest-python"),
+		require("neotest-python")({
+			args = { "--disable-pytest-warnings", "--log-level INFO", "--no-header", "-vv" },
+		}),
 	},
+	discovery = { enabled = false },
 })
