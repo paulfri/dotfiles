@@ -269,7 +269,7 @@ require("lspconfig").tsserver.setup({})
 require("neotest").setup({
 	adapters = {
 		require("neotest-python")({
-			args = { "--disable-pytest-warnings", "--log-level INFO", "--no-header", "-vv" },
+			args = { "--disable-pytest-warnings" },
 		}),
 	},
 	discovery = { enabled = false },
