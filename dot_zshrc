@@ -12,14 +12,16 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 export ZIM_HOME=~/.zim
 export GOPATH="$HOME/go"
+export POETRY_PATH="$HOME/.local/bin"
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$HOME/bin:$PATH:$GOPATH/bin"
+export PATH="$POETRY_PATH:$PYENV_ROOT/bin:$HOME/bin:$PATH:$GOPATH/bin"
 
 alias c="chezmoi"
 alias d="docker"
 alias g="git"
 alias k="kubectl"
 alias kx="kubectx"
+alias p="python"
 alias tc='clear; tmux clear-history; clear'
 alias vim="nvim"
 alias la="exa --long --all --icons"

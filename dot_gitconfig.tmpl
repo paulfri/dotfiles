@@ -1,6 +1,9 @@
 [user]
   name = Paul Friedman
   email = {{ or .email "paulfri@hey.com" }}
+{{ if .signingkey }}
+  signingkey = {{ .signingkey }}
+{{ end }}
 [color]
   ui = true
 [core]
@@ -42,3 +45,5 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[gpg]
+  format = ssh

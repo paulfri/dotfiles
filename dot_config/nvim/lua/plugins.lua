@@ -12,8 +12,11 @@ require("packer").startup(function(use)
 	use("navarasu/onedark.nvim")
 	use("neovim/nvim-lspconfig")
 	use("lukas-reineke/indent-blankline.nvim")
-
 	use("windwp/nvim-autopairs")
+	use("nvim-neotest/neotest-python")
+	use("tyru/open-browser-github.vim")
+	use("tyru/open-browser.vim")
+	use("raimon49/requirements.txt.vim")
 
 	use({
 		"hrsh7th/nvim-cmp",
@@ -158,8 +161,6 @@ require("packer").startup(function(use)
 		end,
 	})
 
-	use("arnamak/stay-centered.nvim")
-
 	use("mfussenegger/nvim-dap")
 	use("mfussenegger/nvim-dap-python")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
@@ -172,13 +173,6 @@ require("packer").startup(function(use)
 			"antoinemadec/FixCursorHold.nvim",
 		},
 	})
-
-	use({
-		"nvim-neotest/neotest-python",
-	})
-
-	use("tyru/open-browser-github.vim")
-	use("tyru/open-browser.vim")
 
 	if packer_bootstrap then
 		require("packer").sync()
@@ -217,8 +211,6 @@ require("indent_blankline").setup({
 		"IndentBlanklineIndent2",
 	},
 })
-
-require("stay-centered")
 
 require("nvim-autopairs").setup({
 	disable_filetype = { "TelescopePrompt", "vim" },
