@@ -51,6 +51,9 @@ require("packer").startup(function(use)
 					typescript = {
 						require("formatter.filetypes.typescript").prettier,
 					},
+					typescriptreact = {
+						require("formatter.filetypes.typescriptreact").prettier,
+					},
 					yaml = {
 						require("formatter.filetypes.yaml").prettier,
 					},
