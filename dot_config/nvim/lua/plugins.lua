@@ -269,3 +269,10 @@ require("neotest").setup({
 	},
 	discovery = { enabled = false },
 })
+
+require("nvim-treesitter.configs").setup({
+	indent = {
+		enable = true,
+		python = false,
+	},
+})
