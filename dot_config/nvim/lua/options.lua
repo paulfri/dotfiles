@@ -2,6 +2,8 @@ vim.cmd("set inccommand=split")
 vim.cmd("set clipboard=unnamedplus")
 vim.cmd("set noswapfile")
 
+vim.g.scrollfix = 50
+vim.g.scrollinfo = 0
 vim.g.mapleader = " "
 
 vim.opt.list = true

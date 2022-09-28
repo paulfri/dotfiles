@@ -17,6 +17,7 @@ require("packer").startup(function(use)
 	use("tyru/open-browser-github.vim")
 	use("tyru/open-browser.vim")
 	use("raimon49/requirements.txt.vim")
+	use("vim-scripts/scrollfix")
 
 	use({
 		"hrsh7th/nvim-cmp",
