@@ -95,6 +95,7 @@ require("packer").startup(function(use)
 	})
 
 	use("nvim-treesitter/nvim-treesitter-context")
+	use({ "yioneko/nvim-yati", requires = "nvim-treesitter/nvim-treesitter" })
 
 	use({
 		"aserowy/tmux.nvim",
@@ -273,6 +274,6 @@ require("neotest").setup({
 require("nvim-treesitter.configs").setup({
 	indent = {
 		enable = true,
-		python = false,
 	},
+	yati = { enable = true },
 })
