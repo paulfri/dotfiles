@@ -92,7 +92,7 @@ require("packer").startup(function(use)
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		run = ":tsupdate",
+		run = ":TSUpdate",
 	})
 
 	use("nvim-treesitter/nvim-treesitter-context")
@@ -221,39 +221,6 @@ require("lint").linters_by_ft = {
 	python = { "flake8" },
 }
 
-require("dapui").setup({
-	icons = { expanded = "▾", collapsed = "▸", current_frame = "▸" },
-	-- Layouts define sections of the screen to place windows.
-	-- The position can be "left", "right", "top" or "bottom".
-	-- The size specifies the height/width depending on position. It can be an Int
-	-- or a Float. Integer specifies height/width directly (i.e. 20 lines/columns) while
-	-- Float value specifies percentage (i.e. 0.3 - 30% of available lines/columns)
-	-- Elements are the elements shown in the layout (in order).
-	-- Layouts are opened in order so that earlier layouts take priority in window sizing.
-	layouts = {
-		{
-			elements = {
-				"scopes",
-			},
-			size = 0.3,
-			position = "left",
-		},
-	},
-	floating = {
-		max_height = nil, -- These can be integers or a float between 0 and 1.
-		max_width = nil, -- Floats will be treated as percentage of your screen.
-		border = "single", -- Border style. Can be "single", "double" or "rounded"
-		mappings = {
-			close = { "q", "<Esc>" },
-		},
-	},
-	windows = { indent = 1 },
-	render = {
-		max_type_length = nil, -- Can be integer or nil.
-		max_value_lines = 100, -- Can be integer or nil.
-	},
-})
-
 require("telescope").load_extension("fzf")
 
 require("lspconfig").pyright.setup({})
@@ -269,6 +236,10 @@ require("neotest").setup({
 })
 
 require("nvim-treesitter.configs").setup({
+	ensure_installed = { "python", "typescript" },
+	highlight = {
+		enable = true,
+	},
 	indent = {
 		enable = true,
 	},

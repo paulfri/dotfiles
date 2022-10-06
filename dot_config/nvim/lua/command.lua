@@ -1,1 +1,1 @@
-vim.api.cmd("command W w", true)
+vim.cmd("command W w", true)
